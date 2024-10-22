@@ -9,7 +9,6 @@ Created on Sat Oct 19 11:03:29 2024
 
 import streamlit as st
 import pandas as pd
-import numpy as np
 from streamlit_option_menu import option_menu
 import pickle
 import base64
