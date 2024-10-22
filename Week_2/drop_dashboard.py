@@ -45,7 +45,7 @@ if fl is not None:
     st.write(filename)
     df = pd.read_csv(filename)
 else:
-    df = pd.read_csv(r'C:\Users\HP\Desktop\Student Dropout Project\datas.csv', delimiter = ';')
+    df = pd.read_csv(r'data_renamed.csv', delimiter = ';')
 
 # Iterate through all columns in the DataFrame
 for cols in df.columns:
