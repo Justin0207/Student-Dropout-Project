@@ -5,3 +5,4 @@ scikit-learn==1.2.2
 shap==0.42.1
 matplotlib==3.7.1
 streamlit_option_menu==0.3.12
+ipython
