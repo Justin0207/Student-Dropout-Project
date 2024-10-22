@@ -66,13 +66,13 @@ else:
     
 # Creating filter for national
 national = st.sidebar.multiselect('Pick a Nationality',
-                                df2.Nacionality.unique())
+                                df2.nationality.unique())
 
 if not national:
     df3 = df2.copy()
     
 else:
-    df3 = df2[df2.Nacionality.isin(national)] 
+    df3 = df2[df2.Nationality.isin(national)] 
     
     
 # Creating filter for course
@@ -89,22 +89,22 @@ elif not national and not course:
     
 elif not stu_cat and not course:
     
-    filtered_df = df[df.Nacionality.isin(national)]
+    filtered_df = df[df.Nationality.isin(national)]
 
 elif national and course:
-    filtered_df = df3[df.Nacionality.isin(national) & df3['Course'].isin(course)]
+    filtered_df = df3[df.Nationality.isin(national) & df3['Course'].isin(course)]
     
 elif stu_cat and course:
-    filtered_df = df3[df.Nacionality.isin(stu_cat) & df3['Course'].isin(course)]
+    filtered_df = df3[df.Nationality.isin(stu_cat) & df3['Course'].isin(course)]
     
 elif stu_cat and national:
-    filtered_df = df3[df['Target'].isin(stu_cat) & df3.Nacionality.isin(national)]
+    filtered_df = df3[df['Target'].isin(stu_cat) & df3.Nationality.isin(national)]
     
 elif course:
     filtered_df = df3[df3['Course'].isin(course)]
     
 else:
-    filtered_df = df3[df3['Target'].isin(stu_cat) & df3.Nacionality.isin(national) & df3['Course'].isin(course)]
+    filtered_df = df3[df3['Target'].isin(stu_cat) & df3.Nationality.isin(national) & df3['Course'].isin(course)]
     
 gender_df = filtered_df.groupby('Gender').agg({'Admission grade': 'mean', 'Previous qualification (grade)': 'mean', 'Curricular units 1st sem (grade)':'mean', 'Curricular units 2nd sem (grade)':'mean', 'GDP': 'mean', 'Unemployment rate': 'mean', 'Inflation rate': 'mean'}).reset_index()
 
