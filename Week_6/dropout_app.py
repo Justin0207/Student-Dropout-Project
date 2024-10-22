@@ -60,7 +60,7 @@ set_background(r'Week_6/academic success.jpg')
 # Helper function to display SHAP plots in Streamlit
 def st_shap(plot, height=None):
     """Render SHAP plots in Streamlit."""
-    shap_html = f"<head>{shap.getjs()}</head><body>{plot.html()}</body>"
+    shap_html = f"<head>{shap.getjs()}</head><body style='background-color: white;>{plot.html()}</body>"
     st.components.v1.html(shap_html, height=height)
 
 with st.sidebar:
