@@ -15,8 +15,6 @@ import pickle
 import base64
 import shap
 import matplotlib.pyplot as plt
-from feature_engineering import *
-
 from sklearn.base import BaseEstimator, TransformerMixin
 import scipy.stats as stats
 from sklearn.preprocessing import PolynomialFeatures
