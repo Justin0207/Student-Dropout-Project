@@ -2,8 +2,7 @@ streamlit
 numpy
 pandas
 scipy
-scikit-learn
+scikit-learn==1.2.2
 shap
 matplotlib
 streamlit_option_menu
-pickle
