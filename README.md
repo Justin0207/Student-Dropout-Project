@@ -94,6 +94,8 @@ streamlit run dropout_app.py
 ### Step 6: Open the Application
 After running the above command, open your browser and go to `http://localhost:8501` to view the web application.
 
+### Alternative
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://student-dropout-prediction-app.streamlit.app/)
 
 ## Project Workflow
